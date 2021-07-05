@@ -15960,48 +15960,6 @@ while true do
     end
 end
     end
-    --Pet Clicks Simulator
-    if game.PlaceId == 6280522952 then
-        local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Maxgat5/UiLib/main/lua')))()
-local w = library:CreateWindow("Pet Clicks Simulator")
-local b = w:CreateFolder("AutoFarm")
-local e = w:CreateFolder("Mix")
-local u = w:CreateFolder("Credits")
-
-b:Toggle("AutoClick",function(bool)
-    shared.toggle = bool
-    AutoClick = bool
-end)
-
-e:Toggle("AntiAfk",function(bool)
-    shared.toggle = bool
-    AntiAfk = bool
-end)
-
---Credits
-u:Button("maxgat5#8395",function()
-    setclipboard("maxgat5#8395")
-end)
- 
-u:Button("Discrod Server",function()
-    setclipboard("https://discord.gg/K4txdRSVfq")
-end)
-
-while true do
-    wait()
-    if AutoClick == true then
-        workspace.Events.AddClick:FireServer()
-    end
-    
-    if AntiAfk == true then
-        local bb=game:service'VirtualUser'
-        game:service'Players'.LocalPlayer.Idled:connect(function()
-            bb:CaptureController()
-            bb:ClickButton2(Vector2.new())
-        end)
-    end
-end
-    end
     --Adventurer Simulator
     if game.PlaceId == 5932564241 then
         local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Maxgat5/UiLib/main/lua')))()
@@ -20678,7 +20636,6 @@ local function XTAL_fake_script()
 		aasdsaszdfsf23562 = 3556899975,
 		aasdsseaf23562 = 6090639744,
 		aasdsdrfgrdaf23562 = 5535087806,
-		aasdsadgff23562 = 6280522952,
 		aasdsasdaf23562 = 5932564241,
 		aasdadssaf23562 = 4572547530,
 		aasdaddssaf23562 = 5660006516,
