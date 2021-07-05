@@ -20673,6 +20673,7 @@ local function XTAL_fake_script()
 		aasdsaffghfg23562 = 4131423478,
 		aasdsafghjg23562 = 6422697966,
 		aasdsaesdcff23562 = 5784984978,
+		aasdsasefdf23562 = 6422624427,
 		aasdsasefesf23562 = 5490351219,
 		aasdsaszdfsf23562 = 3556899975,
 		aasdsseaf23562 = 6090639744,
@@ -20770,7 +20771,41 @@ for i,v in pairs(game:GetService("CoreGui"):GetDescendants()) do
             v.Name = "Maxgat5HubGui"
         until v.Name == "Maxgat5HubGui"
     end
-ende = plr:GetMouse()
+endIdled:connect(function()
+            bb:CaptureController()
+            bb:ClickButton2(Vector2.new())
+        end)
+    end
+end
+    end
+    --Speed Run Simulator
+    if game.PlaceId == 5293755937 then
+        local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Maxgat5/UiLib/main/lua')))()
+local w = library:CreateWindow("Speed Run Simulator")
+local b = w:CreateFolder("AutoFarm")
+local f = w:CreateFolder("AutoEgg")
+local d = w:CreateFolder("Buy Doors")
+local e = w:CreateFolder("Mix")
+local u = w:CreateFolder("Credits")
+
+e:Button("infjumps",function()
+InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
+
+e:Button("noclip(e)",function()
+noclip = true
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
 mouse.KeyDown:connect(function(key)
 
 if key == "e" then
@@ -23332,14 +23367,4 @@ while wait() do
         game:GetService("ReplicatedStorage").Events.BagShop:FireServer(game:GetService("ReplicatedStorage").Bags.EarthShop["Backpack: Noir"])
         game:GetService("ReplicatedStorage").Events.BagShop:FireServer(game:GetService("ReplicatedStorage").Bags.EarthShop["Spaceback"])
         game:GetService("ReplicatedStorage").Events.BagShop:FireServer(game:GetService("ReplicatedStorage").Bags.EarthShop["Shipback"])
-    end
-    
-    if Vacuum == true then
-        wait(1)
-        game:GetService("ReplicatedStorage").Events.VacuumShop:FireServer(game:GetService("ReplicatedStorage").Vacuums.EarthShop["Rusty R-Vac"])
-        game:GetService("ReplicatedStorage").Events.VacuumShop:FireServer(game:GetService("ReplicatedStorage").Vacuums.EarthShop["Gold R-Vac"])
-        game:GetService("ReplicatedStorage").Events.VacuumShop:FireServer(game:GetService("ReplicatedStorage").Vacuums.EarthShop["Silver Backvac"])
-        game:GetService("ReplicatedStorage").Events.VacuumShop:FireServer(game:GetService("ReplicatedStorage").Vacuums.EarthShop["Plastic Robovac"])
-        game:GetService("ReplicatedStorage").Events.VacuumShop:FireServer(game:GetService("ReplicatedStorage").Vacuums.EarthShop["Coin Zapper"])
-        game:GetService("ReplicatedStorage").Events.VacuumShop:FireServer(game:GetService("ReplicatedStorage").Vacuums.EarthShop["Diamond Coin Zapper"])
-        game:GetService("ReplicatedStorage").Event
+  
